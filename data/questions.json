@@ -1,0 +1,94 @@
+{
+  "basic": [
+    {
+      "id": "basic_001",
+      "question": "How would you create a formula to sum all values in column A from row 1 to row 10?",
+      "difficulty": "easy",
+      "expected_topics": ["SUM function", "cell ranges", "basic formulas"],
+      "sample_answer": "=SUM(A1:A10) - This creates a SUM formula that adds all values in the range A1 through A10"
+    },
+    {
+      "id": "basic_002", 
+      "question": "Explain how to format a cell to display currency with two decimal places.",
+      "difficulty": "easy",
+      "expected_topics": ["cell formatting", "currency format", "decimal places"],
+      "sample_answer": "Right-click cell → Format Cells → Number tab → Currency → Set decimal places to 2"
+    },
+    {
+      "id": "basic_003",
+      "question": "How do you freeze the first row in an Excel worksheet?",
+      "difficulty": "easy", 
+      "expected_topics": ["freeze panes", "row freezing", "navigation"],
+      "sample_answer": "Select row 2 → View tab → Freeze Panes → Freeze Top Row"
+    }
+  ],
+  "intermediate": [
+    {
+      "id": "inter_001",
+      "question": "Explain how VLOOKUP works and provide an example of when you would use it.",
+      "difficulty": "medium",
+      "expected_topics": ["VLOOKUP function", "table arrays", "exact match", "data retrieval"],
+      "sample_answer": "VLOOKUP searches for a value in the first column of a range and returns a value from another column. Example: =VLOOKUP(A2,Table1,2,FALSE) to find employee names from employee IDs"
+    },
+    {
+      "id": "inter_002",
+      "question": "How would you create a pivot table to analyze sales data by region and month?",
+      "difficulty": "medium",
+      "expected_topics": ["pivot tables", "data analysis", "grouping", "summarization"],
+      "sample_answer": "Insert → PivotTable → Select data range → Drag Region to Rows, Month to Columns, Sales to Values"
+    },
+    {
+      "id": "inter_003",
+      "question": "Describe conditional formatting and give an example of how you'd highlight cells based on their values.",
+      "difficulty": "medium",
+      "expected_topics": ["conditional formatting", "data visualization", "cell highlighting", "rules"],
+      "sample_answer": "Conditional formatting changes cell appearance based on values. Example: Home → Conditional Formatting → Highlight Cells Rules → Greater Than to highlight values above a threshold"
+    }
+  ],
+  "advanced": [
+    {
+      "id": "adv_001",
+      "question": "Explain the difference between INDEX and MATCH functions and why you might use them together.",
+      "difficulty": "hard",
+      "expected_topics": ["INDEX function", "MATCH function", "array formulas", "lookup alternatives"],
+      "sample_answer": "INDEX returns a value at a specific position, MATCH finds the position of a value. Together they're more flexible than VLOOKUP: =INDEX(B:B,MATCH(A2,A:A,0)) can look left and right"
+    },
+    {
+      "id": "adv_002",
+      "question": "How would you create a dynamic dashboard that updates automatically when new data is added?",
+      "difficulty": "hard",
+      "expected_topics": ["dynamic ranges", "tables", "charts", "data validation", "automation"],
+      "sample_answer": "Use Excel Tables for auto-expanding ranges, create charts from tables, use dynamic formulas, set up data validation, and consider Power Query for data refresh"
+    },
+    {
+      "id": "adv_003",
+      "question": "Describe how you would use array formulas to perform calculations across multiple criteria.",
+      "difficulty": "hard",
+      "expected_topics": ["array formulas", "multiple criteria", "SUMPRODUCT", "complex calculations"],
+      "sample_answer": "Array formulas process multiple values simultaneously. Example: =SUMPRODUCT((A:A=\"Criteria1\")*(B:B=\"Criteria2\")*C:C) to sum values meeting multiple conditions"
+    }
+  ],
+  "scenario": [
+    {
+      "id": "scenario_001",
+      "question": "You have a dataset with 10,000 sales records. How would you identify the top 10 performing salespeople and create a summary report?",
+      "difficulty": "medium",
+      "expected_topics": ["data analysis", "pivot tables", "sorting", "filtering", "reporting"],
+      "sample_answer": "Create pivot table with Salesperson in Rows and Sales in Values, sort by sum of sales descending, filter top 10, create charts and summary statistics"
+    },
+    {
+      "id": "scenario_002",
+      "question": "Your manager needs a monthly budget vs actual spending report that highlights variances over 10%. How would you build this?",
+      "difficulty": "hard", 
+      "expected_topics": ["variance analysis", "conditional formatting", "percentage calculations", "reporting", "data visualization"],
+      "sample_answer": "Create columns for Budget, Actual, Variance (Actual-Budget), Variance% ((Actual-Budget)/Budget). Use conditional formatting to highlight variances >10%. Add charts and summary metrics."
+    },
+    {
+      "id": "scenario_003",
+      "question": "You need to consolidate data from 12 monthly Excel files into one master report. What's your approach?",
+      "difficulty": "hard",
+      "expected_topics": ["data consolidation", "Power Query", "automation", "data integration", "file management"],
+      "sample_answer": "Use Power Query to combine files: Data → Get Data → From File → From Folder. Set up data transformation steps, establish refresh process, create master pivot tables and dashboards"
+    }
+  ]
+}

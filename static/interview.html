@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Excel Mock Interviewer</title>
+    <link rel="stylesheet" href="interview.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Excel Mock Interviewer</h1>
+      <div id="welcome">
+        <input type="text" id="candidateName" placeholder="Enter your name" />
+        <button onclick="startInterview()">Start Interview</button>
+      </div>
+      <div id="questionSection" style="display: none">
+        <div id="questionText"></div>
+        <textarea
+          id="answerInput"
+          placeholder="Type your answer here..."
+        ></textarea>
+        <button onclick="submitAnswer()">Submit Answer</button>
+        <button onclick="endInterview()">End Interview</button>
+      </div>
+      <div id="statusSection" style="display: none">
+        <h3>Interview Status</h3>
+        <div id="statusText"></div>
+        <button
+          id="getReportBtn"
+          style="display: none"
+          onclick="getFinalReport()"
+        >
+          Get Your Report
+        </button>
+      </div>
+      <div id="reportSection" style="display: none">
+        <h3>Final Report</h3>
+        <pre id="reportText"></pre>
+      </div>
+      <div id="adminSection" style="display: none">
+        <button onclick="getStatus()">View Interview Status</button>
+        <button onclick="getResponses()">View All Responses</button>
+        <button onclick="deleteInterview()">Delete Interview</button>
+        <button onclick="healthCheck()">API Health Check</button>
+      </div>
+    </div>
+
+    <!-- Loading Section -->
+    <div id="loadingSection" style="display: none">
+      <h3>Getting your report ready...</h3>
+      <div class="loader"></div>
+    </div>
+
+    <!-- Report Page -->
+    <div id="fullReportPage" style="display: none">
+      <h2>Your Interview Report</h2>
+      <pre id="fullReportText"></pre>
+      <button onclick="show('welcome')">Back to Home</button>
+    </div>
+
+    <script src="interview.js"></script>
+  </body>
+</html>
