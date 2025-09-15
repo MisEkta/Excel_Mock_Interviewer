@@ -292,3 +292,7 @@ If Low Confidence: Offer explanation and simpler question
 ## Conclusion
 
 This design provides a comprehensive framework for automating Excel skills assessment while maintaining the human touch of a quality interview experience. The system's success depends on careful implementation of the cold start strategy and continuous refinement based on real-world performance data.
+
+## Project Demo Link
+
+**https://www.loom.com/share/1707dcdbce3b400383d836c26ce6517e?sid=b3afe252-0d43-4a9f-84ca-47290ae8bb41**
